@@ -6,76 +6,102 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
-}
-
-/* Header and Navigation */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
     text-align: center;
-}
-
-nav a {
-    color: #fff;
-    padding: 0 1rem;
-    text-decoration: none;
-}
-
-nav a.active {
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 /* Main Content */
 main {
     padding: 1rem;
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 600px;
+    margin: 40px auto;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-/* Articles and Posts */
-article {
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Test Container */
+#test-container {
+    padding: 2rem;
+}
+
+#progress-bar-container {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 13px;
+    margin-bottom: 2rem;
+}
+
+#progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #4caf50;
+    border-radius: 13px;
+    transition: width 0.5s ease-in-out;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#answers button {
+    display: block;
+    width: 100%;
     padding: 1rem;
-}
-
-article h1 {
-    font-size: 2rem;
-}
-
-article p {
     margin-bottom: 1rem;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#answers button:hover {
+    background: #45a049;
+}
+
+/* Result Container */
+#result-container {
+    padding: 2rem;
+}
+
+#result-title {
+    font-size: 2rem;
+    color: #4caf50;
+}
+
+#result-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #555;
 }
 
 /* Footer */
 footer {
-    text-align: center;
+    margin-top: 2rem;
     padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Latest Posts Section */
-#latest-posts ul {
-    list-style: none;
-    padding: 0;
-}
-
-#latest-posts li {
-    margin-bottom: 0.5rem;
-}
-
-#latest-posts a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-#latest-posts a:hover {
-    text-decoration: underline;
 }

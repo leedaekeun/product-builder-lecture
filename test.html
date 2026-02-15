@@ -11,12 +11,19 @@
 </head>
 <body>
   <main>
-    <h1>Egen/Teto Personality Test</h1>
-    <p>Find out your Egen/Teto type and discover your unique charm!</p>
-    <button onclick="location.href='/test.html'">Start Test</button>
+    <div id="test-container">
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+      <h2 id="question"></h2>
+      <div id="answers">
+      </div>
+    </div>
   </main>
   <footer>
     <p>&copy; 2026 My Personality Test. All rights reserved.</p>
   </footer>
+  <script src="/data.js"></script>
+  <script src="/test.js"></script>
 </body>
 </html>
