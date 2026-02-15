@@ -1,0 +1,7 @@
+firebase-debug.log
+.DS_Store
+.vscode
+.idx
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
