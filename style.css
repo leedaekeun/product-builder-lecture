@@ -1,1 +1,81 @@
-/* Add styles here */
+/* General Body Styles */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Articles and Posts */
+article {
+    padding: 1rem;
+}
+
+article h1 {
+    font-size: 2rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Latest Posts Section */
+#latest-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+#latest-posts li {
+    margin-bottom: 0.5rem;
+}
+
+#latest-posts a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#latest-posts a:hover {
+    text-decoration: underline;
+}
