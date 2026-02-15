@@ -1,21 +1,12 @@
 const resultTitleElement = document.getElementById('result-title');
 const resultDescriptionElement = document.getElementById('result-description');
-const resultImage1 = document.getElementById('result-image-1');
-const resultImage2 = document.getElementById('result-image-2');
+const placeholder1 = document.getElementById('placeholder-1');
+const placeholder2 = document.getElementById('placeholder-2');
+const resultImages = document.getElementById('result-images');
+
 
 const urlParams = new URLSearchParams(window.location.search);
 const score = parseInt(urlParams.get('score'));
-
-const imagePlaceholders = {
-    "Teto": {
-        "woman": "https://via.placeholder.com/400x400.png?text=Strong+Woman+(Teto)",
-        "man": "https://via.placeholder.com/400x400.png?text=Strong+Man+(Teto)"
-    },
-    "Egen": {
-        "woman": "https://via.placeholder.com/400x400.png?text=Gentle+Woman+(Egen)",
-        "man": "https://via.placeholder.com/400x400.png?text=Gentle+Man+(Egen)"
-    }
-}
 
 function showResult() {
     let resultType = '';
@@ -37,20 +28,24 @@ function showResult() {
     const result = results[resultType];
     resultTitleElement.innerText = result.title;
     resultDescriptionElement.innerText = result.description;
+    
+    resultImages.style.display = 'flex';
 
     if (dominantTrait) {
-        resultImage1.src = imagePlaceholders[dominantTrait].woman;
-        resultImage2.src = imagePlaceholders[dominantTrait].man;
+        placeholder1.innerText = `강한 ${dominantTrait === 'Teto' ? '여자' : '남자'} 이미지`;
+        placeholder2.innerText = `강한 ${dominantTrait === 'Teto' ? '남자' : '여자'} 이미지`;
+        if (dominantTrait === 'Teto') {
+            placeholder1.innerText = '강한 여자 (테토)';
+            placeholder2.innerText = '강한 남자 (테토)';
+        } else {
+            placeholder1.innerText = '부드러운 여자 (에겐)';
+            placeholder2.innerText = '부드러운 남자 (에겐)';
+        }
+
     } else {
         // Balanced
-        resultImage1.src = imagePlaceholders["Teto"].woman;
-        resultImage2.src = imagePlaceholders["Egen"].man;
-        const resultImages = document.getElementById('result-images');
-        resultImages.style.display = 'flex';
-        resultImage1.style.width = '50%';
-        resultImage2.style.width = '50%';
-
-
+        placeholder1.innerText = '강한 여자 (테토)';
+        placeholder2.innerText = '부드러운 남자 (에겐)';
     }
 }
 
