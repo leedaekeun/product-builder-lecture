@@ -1,0 +1,17 @@
+{
+  "name": "produckbuilder-week1",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://leedaekeun.github.io/product-builder-lecture",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
